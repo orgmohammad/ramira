@@ -1,59 +1,67 @@
-/* style.css */
 body {
-  font-family: 'Tahoma', sans-serif;
   margin: 0;
-  padding: 0;
-  background: #f8f8f8;
+  font-family: sans-serif;
+  background: #fafafa;
   color: #333;
-  text-align: center;
 }
 
 .header {
-  padding: 20px 0;
-  background: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 15px 30px;
+  background: white;
   box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  position: sticky;
+  top: 0;
 }
 
 .logo {
-  max-height: 80px;
-  object-fit: contain;
+  height: 50px;
+}
+
+nav a {
+  margin: 0 10px;
+  text-decoration: none;
+  color: #333;
+  font-weight: bold;
 }
 
 .products {
-  padding: 40px 20px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 20px;
+  padding: 30px;
 }
 
-.product-card {
-  display: inline-block;
-  background: #fff;
-  padding: 20px;
+.product {
+  background: white;
   border-radius: 10px;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-  max-width: 400px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  padding: 15px;
+  text-align: center;
+  transition: transform 0.3s;
 }
 
-.images {
-  display: flex;
-  justify-content: center;
-  gap: 10px;
-  margin-bottom: 20px;
+.product:hover {
+  transform: translateY(-5px);
 }
 
-.product-front, .product-back {
-  width: 45%;
+.product img {
+  width: 100%;
   border-radius: 8px;
-  object-fit: cover;
+  margin-bottom: 10px;
 }
 
 .whatsapp-btn {
   display: inline-block;
-  padding: 12px 24px;
+  margin-top: 10px;
+  padding: 10px 20px;
   background: #25d366;
-  color: #fff;
-  font-weight: bold;
+  color: white;
   border-radius: 8px;
   text-decoration: none;
-  transition: background 0.3s;
+  font-weight: bold;
 }
 
 .whatsapp-btn:hover {
@@ -61,8 +69,9 @@ body {
 }
 
 .footer {
-  margin-top: 40px;
-  padding: 20px 0;
-  background: #eee;
-  font-size: 0.9rem;
+  margin-top: 30px;
+  padding: 20px;
+  text-align: center;
+  background: #f0f0f0;
+  font-size: 0.9em;
 }
