@@ -1,37 +1,46 @@
+<!-- index.html -->
 <!doctype html>
 <html lang="fa">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>فروشگاه راميرا</title>
+  <title>راميرا | فروشگاه</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
+  <!-- هدر -->
   <header class="header">
-    <img src="https://raw.githubusercontent.com/orgmohammad/ramira/main/photo_2025-09-19_18-16-32.jpg" 
-         alt="لوگو راميرا" class="logo">
-    <h1>راميرا</h1>
+    <img src="https://raw.githubusercontent.com/orgmohammad/ramira/main/photo_2025-09-19_18-16-32.jpg" class="logo" alt="لوگو">
+    <nav>
+      <a href="#">خانه</a>
+      <a href="#products">محصولات</a>
+      <a href="#contact">تماس با ما</a>
+    </nav>
   </header>
 
-  <section class="products">
-    <div class="product-card">
-      <h2>نمونه کاری راميرا</h2>
-      <div class="images">
-        <img src="https://raw.githubusercontent.com/orgmohammad/ramira/main/photo_2025-09-19_18-11-02.jpg" 
-             alt="اسلاید ۱ (جلو کارت)" class="product-front">
-        <img src="https://raw.githubusercontent.com/orgmohammad/ramira/main/photo_2025-09-19_18-16-32.jpg" 
-             alt="اسلاید ۲ (پشت کارت)" class="product-back">
-      </div>
-      <a class="whatsapp-btn"
-         href="https://wa.me/98912XXXXXXX?text=سلام%20می‌خواهم%20این%20نمونه%20کارت%20را%20سفارش%20بدهم"
-         target="_blank">
-        سفارش در واتساپ
-      </a>
+  <!-- لیست محصولات -->
+  <main id="products" class="products">
+    <div class="product">
+      <img src="https://raw.githubusercontent.com/orgmohammad/ramira/main/photo_2025-09-19_18-11-02.jpg" alt="محصول ۱">
+      <h2>کارت ویزیت (طرح ۱)</h2>
+      <p>نمونه کار جلو</p>
+      <a href="https://wa.me/98912XXXXXXX?text=سلام%20می‌خوام%20کارت%20ویزیت%20طرح%201%20سفارش%20بدم" target="_blank" class="whatsapp-btn">سفارش در واتساپ</a>
     </div>
-  </section>
 
-  <footer class="footer">
-    <p>© 2025 راميرا — همه حقوق محفوظ است</p>
+    <div class="product">
+      <img src="https://raw.githubusercontent.com/orgmohammad/ramira/main/photo_2025-09-19_18-16-32.jpg" alt="محصول ۲">
+      <h2>کارت ویزیت (طرح ۲)</h2>
+      <p>نمونه کار پشت</p>
+      <a href="https://wa.me/98912XXXXXXX?text=سلام%20می‌خوام%20کارت%20ویزیت%20طرح%202%20سفارش%20بدم" target="_blank" class="whatsapp-btn">سفارش در واتساپ</a>
+    </div>
+    
+    <!-- همینجوری می‌تونی محصول‌های بیشتری اضافه کنی -->
+  </main>
+
+  <!-- فوتر -->
+  <footer id="contact" class="footer">
+    <p>© 2025 راميرا | همه حقوق محفوظ است</p>
+    <p>ارتباط: <a href="https://wa.me/98912XXXXXXX" target="_blank">واتساپ</a></p>
   </footer>
 </body>
 </html>
