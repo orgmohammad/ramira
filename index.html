@@ -2,38 +2,42 @@
 <html lang="fa">
 <head>
   <meta charset="UTF-8">
-  <title>فروشگاه راميرا</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>رامیرا — فروشگاه</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <header class="site-header">
-    <img src="https://github.com/orgmohammad/ramira/raw/main/photo_2025-09-19_18-16-32.jpg" alt="راميرا" class="logo">
-    <h1>Ramira Store</h1>
+  <!-- هدر -->
+  <header>
+    <img src="https://github.com/orgmohammad/ramira/raw/main/photo_2025-09-19_18-16-32.jpg" alt="لوگوی رامیرا" class="logo">
   </header>
 
-  <main class="grid" id="product-grid">
-    <!-- محصولات به صورت داینامیک لود می‌شن -->
+  <!-- محصولات -->
+  <main class="container">
+    <div class="products">
+      <!-- محصول ۱ -->
+      <a href="product1.html" class="product-card">
+        <div class="card-img">
+          <img src="https://github.com/orgmohammad/ramira/raw/main/photo_2025-09-19_18-10-36.jpg" alt="ژیله مدل سرمه">
+        </div>
+        <h3>ژیله مدل سرمه</h3>
+        <p class="price">۱,۱۹۹,۰۰۰ تومان</p>
+      </a>
+
+      <!-- محصول ۲ -->
+      <a href="product2.html" class="product-card">
+        <div class="card-img">
+          <img src="https://github.com/orgmohammad/ramira/raw/main/photo_2025-09-19_18-11-37.jpg" alt="ژیله مدل دوک">
+        </div>
+        <h3>ژیله مدل دوک</h3>
+        <p class="price">۱,۱۹۹,۰۰۰ تومان</p>
+      </a>
+    </div>
   </main>
 
-  <script>
-    fetch('data/products.json')
-      .then(r => r.json())
-      .then(data => {
-        const grid = document.getElementById('product-grid');
-        data.products.forEach(p => {
-          const card = document.createElement('a');
-          card.href = `product.html?id=${p.id}`;
-          card.className = 'card';
-          card.innerHTML = `
-            <img src="${p.images[0]}" alt="${p.name}">
-            <div class="card-body">
-              <h3>${p.name}</h3>
-              <p class="price">${p.price}</p>
-            </div>
-          `;
-          grid.appendChild(card);
-        });
-      });
-  </script>
+  <!-- فوتر -->
+  <footer>
+    <p>© ۲۰۲۵ رامیرا — طراحی شده با عشق 💖</p>
+  </footer>
 </body>
 </html>
