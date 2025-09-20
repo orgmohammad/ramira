@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>جزئیات محصول — رامیرا</title>
+  <title>کت سنتی — طرح A | رامیرا</title>
   <link rel="stylesheet" href="style.css">
   <style>
     .product-detail {
@@ -13,49 +13,39 @@
       flex-wrap: wrap;
       gap: 40px;
       align-items: flex-start;
+      padding: 0 20px;
     }
-
-    /* بخش اسلایدشو */
     .slideshow {
       position: relative;
       max-width: 450px;
       flex: 1;
     }
-
     .slides {
       display: none;
       width: 100%;
       border-radius: 8px;
     }
-
     .active {
       display: block;
     }
-
-    /* بخش توضیحات */
     .desc {
       flex: 1;
       text-align: right;
     }
-
     .desc h2 {
       margin-top: 0;
       font-size: 22px;
     }
-
     .desc p {
       line-height: 1.8;
       color: #444;
     }
-
     .price {
       font-size: 20px;
       font-weight: bold;
       margin-top: 15px;
       color: #e60023;
     }
-
-    /* برای موبایل */
     @media (max-width: 768px) {
       .product-detail {
         flex-direction: column;
@@ -69,21 +59,21 @@
 </head>
 <body>
   <header>
-    <div class="logo"><a href="index.html">رامیرا</a></div>
+    <img src="https://github.com/orgmohammad/ramira/raw/main/photo_2025-09-19_18-16-32.jpg" alt="لوگوی رامیرا" class="logo">
   </header>
 
   <main class="product-detail">
-    <!-- اسلایدشو سمت راست -->
+    <!-- اسلایدشو -->
     <div class="slideshow">
       <img class="slides active" src="https://github.com/orgmohammad/ramira/raw/main/photo_2025-09-19_18-10-36.jpg" alt="جلوی کار">
       <img class="slides" src="https://github.com/orgmohammad/ramira/raw/main/photo_2025-09-19_18-11-02.jpg" alt="پشت کار">
     </div>
 
-    <!-- توضیحات سمت چپ -->
+    <!-- توضیحات -->
     <div class="desc">
       <h2>کت سنتی — طرح A</h2>
       <p>
-        این کت سنتی با طراحی خاص و جنس عالی، مناسب مجالس و استفاده روزمره است. 
+        این کت سنتی با طراحی خاص و جنس عالی، مناسب مجالس و استفاده روزمره است.
         دوخت تمیز و پارچه باکیفیت باعث می‌شود ظاهر شیک و متفاوتی داشته باشید.
       </p>
       <p class="price">۹۰۰,۰۰۰ تومان</p>
