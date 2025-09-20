@@ -1,108 +1,77 @@
+/* استایل کلی */
 body {
-  font-family: "IRANSans", sans-serif;
   margin: 0;
-  padding: 0;
-  background: #fafafa;
+  font-family: "Tahoma", sans-serif;
+  background: #fff;
   color: #222;
   direction: rtl;
 }
 
-/* Header */
-.site-header {
-  background: #111;
-  color: #fff;
+/* هدر */
+header {
   text-align: center;
-  padding: 20px;
+  padding: 25px;
+  border-bottom: 1px solid #eee;
 }
-.site-header .logo {
+
+.logo {
   height: 60px;
-  display: block;
-  margin: 0 auto 10px;
-}
-.site-header h1 {
-  font-size: 22px;
-  margin: 0;
-  letter-spacing: 2px;
+  object-fit: contain;
 }
 
-/* Grid */
-.grid {
+/* بخش محصولات */
+.container {
+  padding: 40px 20px;
+}
+
+.products {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 25px;
-  padding: 30px;
-  max-width: 1200px;
-  margin: auto;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 30px;
+  justify-items: center;
 }
 
-/* Product Card */
-.card {
+.product-card {
   background: #fff;
-  border-radius: 15px;
+  border-radius: 10px;
   overflow: hidden;
   text-decoration: none;
   color: inherit;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-  transition: transform 0.25s ease;
+  max-width: 240px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
-.card:hover {
+
+.product-card:hover {
   transform: translateY(-5px);
+  box-shadow: 0 6px 20px rgba(0,0,0,0.12);
 }
-.card img {
+
+.card-img img {
   width: 100%;
-  height: 320px;
+  height: 280px;
   object-fit: cover;
 }
-.card-body {
-  padding: 15px;
-  text-align: center;
+
+.product-card h3 {
+  margin: 12px;
+  font-size: 15px;
+  font-weight: 600;
 }
-.card-body h3 {
-  margin: 10px 0;
-  font-size: 18px;
-}
+
 .price {
+  margin: 0 12px 15px;
   font-weight: bold;
-  color: #b8860b;
-  font-size: 16px;
+  font-size: 14px;
+  color: #e60023;
 }
 
-/* Product Detail */
-#product-detail {
-  max-width: 800px;
-  margin: 40px auto;
+/* فوتر */
+footer {
+  margin-top: 50px;
   padding: 20px;
-  background: #fff;
-  border-radius: 15px;
-  box-shadow: 0 4px 15px rgba(0,0,0,0.1);
   text-align: center;
-}
-.gallery {
-  display: flex;
-  gap: 15px;
-  justify-content: center;
-  flex-wrap: wrap;
-  margin: 20px 0;
-}
-.gallery img {
-  max-width: 220px;
-  border-radius: 12px;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-}
-.desc {
-  margin: 20px 0;
-  font-size: 16px;
-  line-height: 1.8;
-  color: #444;
-}
-
-/* Back button */
-.back-btn {
-  color: #fff;
-  text-decoration: none;
-  display: inline-block;
-  padding: 10px;
-}
-.back-btn:hover {
-  text-decoration: underline;
+  font-size: 14px;
+  color: #777;
+  border-top: 1px solid #eee;
 }
