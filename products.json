@@ -1,23 +1,35 @@
-[
-  {
-    "id": "1",
-    "title": "کارت ویزیت — طرح A",
-    "price": 120000,
-    "oldPrice": 150000,
-    "images": [
-      "https://raw.githubusercontent.com/orgmohammad/ramira/main/photo_2025-09-19_18-10-36.jpg",
-      "https://raw.githubusercontent.com/orgmohammad/ramira/main/photo_2025-09-19_18-11-02.jpg"
-    ],
-    "description": "کارت ویزیت حرفه‌ای شامل طرح جلو و پشت. جنس کارت: مات، طراحی اختصاصی."
-  },
-  {
-    "id": "2",
-    "title": "لوگو روی کارت — طرح B",
-    "price": 90000,
-    "oldPrice": null,
-    "images": [
-      "https://raw.githubusercontent.com/orgmohammad/ramira/main/photo_2025-09-19_18-10-36.jpg"
-    ],
-    "description": "نمونه طراحی با لوگوی اختصاصی."
-  }
-]
+{
+  "products": [
+    {
+      "id": "1",
+      "name": "ژیله مدل سرمه",
+      "price": "۱,۱۹۹,۰۰۰ تومان",
+      "desc": "ژیله مدل سرمه. آستردار. قد حدود ۶۳. کارها به صورت تک‌دوزی و طراحی‌شده هستند و حس خاص بودن را منتقل می‌کنند.",
+      "images": [
+        "https://github.com/orgmohammad/ramira/raw/main/photo_2025-09-19_18-10-36.jpg",
+        "https://github.com/orgmohammad/ramira/raw/main/photo_2025-09-19_18-11-02.jpg"
+      ]
+    },
+    {
+      "id": "2",
+      "name": "ژیله مدل دوک",
+      "price": "۱,۱۹۹,۰۰۰ تومان",
+      "desc": "ژیله مدل دوک. آستردار. قد حدود ۶۳. کارها به صورت تک‌دوزی و طراحی‌شده هستند.",
+      "images": [
+        "https://github.com/orgmohammad/ramira/raw/main/photo_2025-09-19_18-11-37.jpg",
+        "https://github.com/orgmohammad/ramira/raw/main/photo_2025-09-19_18-11-41.jpg"
+      ]
+    },
+    {
+      "id": "3",
+      "name": "ژیله مدل پانیذ",
+      "price": "۱,۱۹۹,۰۰۰ تومان",
+      "desc": "ژیله مدل پانیذ. آستردار. قد حدود ۶۳. کارها به صورت تک‌دوزی و طراحی‌شده هستند و حس خاص بودن را منتقل می‌کنند.",
+      "images": [
+        "https://github.com/orgmohammad/ramira/raw/main/photo_2025-09-19_18-12-37.jpg",
+        "https://github.com/orgmohammad/ramira/raw/main/photo_2025-09-19_18-12-40.jpg",
+        "https://github.com/orgmohammad/ramira/raw/main/photo_2025-09-19_18-12-43.jpg"
+      ]
+    }
+  ]
+}
