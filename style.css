@@ -1,93 +1,64 @@
 body {
   margin: 0;
   font-family: sans-serif;
-  background: #fafafa;
-  color: #333;
+  background: #fff;
+  color: #222;
 }
 
 .header {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: 15px 30px;
-  background: white;
-  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-  position: sticky;
-  top: 0;
+  text-align: center;
+  padding: 20px;
+  border-bottom: 1px solid #eee;
 }
 
 .logo {
-  height: 50px;
+  height: 60px;
 }
 
-nav a {
-  margin: 0 10px;
-  text-decoration: none;
-  color: #333;
-  font-weight: bold;
-}
-
-.products {
+.product-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
   gap: 20px;
   padding: 30px;
 }
 
-.product {
-  background: white;
-  border-radius: 10px;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-  padding: 15px;
+.product-card {
+  text-decoration: none;
+  color: inherit;
   text-align: center;
+}
+
+.product-card img {
+  width: 100%;
+  border-radius: 10px;
+  margin-bottom: 10px;
   transition: transform 0.3s;
 }
 
-.product:hover {
-  transform: translateY(-5px);
+.product-card:hover img {
+  transform: scale(1.05);
 }
 
-.product img {
-  width: 100%;
-  border-radius: 8px;
-  margin-bottom: 10px;
+.product-card h2 {
+  font-size: 1rem;
+  font-weight: normal;
 }
 
-.whatsapp-btn {
-  display: inline-block;
-  margin-top: 10px;
-  padding: 10px 20px;
-  background: #25d366;
-  color: white;
-  border-radius: 8px;
-  text-decoration: none;
-  font-weight: bold;
-}
-
-.whatsapp-btn:hover {
-  background: #1ebe5d;
-}
-
-.footer {
-  margin-top: 30px;
-  padding: 20px;
-  text-align: center;
-  background: #f0f0f0;
-  font-size: 0.9em;
-}
-/* استایل صفحه محصول */
 .product-page {
   padding: 20px;
   text-align: center;
 }
 
+.product-page h1 {
+  margin-bottom: 20px;
+}
+
 .swiper {
-  width: 90%;
+  width: 100%;
   max-width: 400px;
-  margin: 20px auto;
+  margin: 0 auto 20px;
   border-radius: 10px;
   overflow: hidden;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
 }
 
 .swiper-slide img {
@@ -96,7 +67,17 @@ nav a {
 }
 
 .description {
-  margin: 20px 0;
-  font-size: 1.1em;
+  font-size: 1rem;
+  line-height: 1.6;
+  max-width: 600px;
+  margin: 0 auto;
+  text-align: justify;
 }
 
+.footer {
+  margin-top: 30px;
+  padding: 20px;
+  text-align: center;
+  border-top: 1px solid #eee;
+  font-size: 0.9em;
+}
