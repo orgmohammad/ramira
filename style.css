@@ -1,39 +1,42 @@
 .products {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-  gap: 20px;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 25px;
   justify-items: center;
 }
 
 .product-card {
   display: block;
   background: #fff;
-  border-radius: 8px;
+  border-radius: 6px;
   overflow: hidden;
   text-decoration: none;
   color: inherit;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
   transition: transform 0.2s ease;
-  max-width: 250px; /* اندازه کارت کنترل شده */
+  max-width: 220px;   /* ✅ اندازه کارت کنترل شده */
 }
 
 .product-card:hover {
-  transform: scale(1.03);
+  transform: scale(1.02);
 }
 
 .product-card img {
   width: 100%;
-  height: auto;
+  height: 280px;      /* ✅ ارتفاع ثابت مثل نمونه */
+  object-fit: cover;  /* ✅ برش تصویر مثل فروشگاه‌های لباس */
   display: block;
 }
 
 .product-card h3 {
-  margin: 10px 0 5px;
-  font-size: 15px;
+  margin: 10px 0 3px;
+  font-size: 14px;
+  font-weight: normal;
 }
 
 .price {
   font-weight: bold;
-  margin-bottom: 15px;
+  margin-bottom: 12px;
   color: #e60023;
+  font-size: 13px;
 }
