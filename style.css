@@ -75,3 +75,17 @@ footer {
   color: #777;
   border-top: 1px solid #eee;
 }
+.gallery {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 15px;
+  margin: 20px 0;
+}
+
+.gallery img {
+  max-width: 400px; /* حداکثر عرض عکس */
+  width: 100%;
+  border-radius: 10px;
+}
+
