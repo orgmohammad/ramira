@@ -6,31 +6,34 @@
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <header>
-    <h1>فروشگاه راميرا</h1>
+  <header class="site-header">
+    <img src="https://github.com/orgmohammad/ramira/raw/main/photo_2025-09-19_18-16-32.jpg" alt="راميرا" class="logo">
+    <h1>Ramira Store</h1>
   </header>
 
-  <main class="grid">
-    <!-- محصول 1 -->
-    <a href="product1.html" class="card">
-      <img src="https://github.com/orgmohammad/ramira/raw/main/photo_2025-09-19_18-10-36.jpg" alt="ژیله مدل سرمه">
-      <h3>ژیله مدل سرمه</h3>
-      <p class="price">۱,۱۹۹,۰۰۰ تومان</p>
-    </a>
-
-    <!-- محصول 2 -->
-    <a href="product2.html" class="card">
-      <img src="https://github.com/orgmohammad/ramira/raw/main/photo_2025-09-19_18-11-37.jpg" alt="ژیله مدل دوک">
-      <h3>ژیله مدل دوک</h3>
-      <p class="price">۱,۱۹۹,۰۰۰ تومان</p>
-    </a>
-
-    <!-- محصول 3 -->
-    <a href="product3.html" class="card">
-      <img src="https://github.com/orgmohammad/ramira/raw/main/photo_2025-09-19_18-12-37.jpg" alt="ژیله مدل پانیذ">
-      <h3>ژیله مدل پانیذ</h3>
-      <p class="price">۱,۱۹۹,۰۰۰ تومان</p>
-    </a>
+  <main class="grid" id="product-grid">
+    <!-- محصولات به صورت داینامیک لود می‌شن -->
   </main>
+
+  <script>
+    fetch('data/products.json')
+      .then(r => r.json())
+      .then(data => {
+        const grid = document.getElementById('product-grid');
+        data.products.forEach(p => {
+          const card = document.createElement('a');
+          card.href = `product.html?id=${p.id}`;
+          card.className = 'card';
+          card.innerHTML = `
+            <img src="${p.images[0]}" alt="${p.name}">
+            <div class="card-body">
+              <h3>${p.name}</h3>
+              <p class="price">${p.price}</p>
+            </div>
+          `;
+          grid.appendChild(card);
+        });
+      });
+  </script>
 </body>
 </html>
