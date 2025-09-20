@@ -25,10 +25,16 @@ header {
 }
 
 .products {
+  
+ .grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-  gap: 30px;
-  justify-items: center;
+  grid-template-columns: repeat(4, 1fr); /* دقیقا ۴ تا ستون */
+  gap: 25px;
+  padding: 30px;
+  max-width: 1400px; /* جا برای ۴ ستون */
+  margin: auto;
+}
+
 }
 
 .product-card {
