@@ -1,83 +1,62 @@
-body {
-  margin: 0;
-  font-family: sans-serif;
-  background: #fff;
-  color: #222;
-}
+<!doctype html>
+<html lang="fa">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>جزئیات محصول — راميرا</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
+</head>
+<body>
+  <header class="site-header">
+    <div class="container">
+      <a href="index.html"><img class="site-logo" src="https://raw.githubusercontent.com/orgmohammad/ramira/main/photo_2025-09-19_18-16-32.jpg" alt="لوگو"></a>
+    </div>
+  </header>
 
-.header {
-  text-align: center;
-  padding: 20px;
-  border-bottom: 1px solid #eee;
-}
+  <main class="container product-page">
+    <div id="productRoot"></div>
+  </main>
 
-.logo {
-  height: 60px;
-}
+  <footer class="site-footer">© 2025 راميرا</footer>
 
-.product-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-  gap: 20px;
-  padding: 30px;
-}
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+  <script>
+    const params = new URLSearchParams(location.search);
+    const id = params.get('id');
 
-.product-card {
-  text-decoration: none;
-  color: inherit;
-  text-align: center;
-}
+    fetch('products.json')
+      .then(r => r.json())
+      .then(products => {
+        const p = products.find(x => x.id === id);
+        if (!p) { document.getElementById('productRoot').innerHTML = '<p>محصول پیدا نشد.</p>'; return; }
 
-.product-card img {
-  width: 100%;
-  border-radius: 10px;
-  margin-bottom: 10px;
-  transition: transform 0.3s;
-}
+        const root = document.getElementById('productRoot');
+        root.innerHTML = `
+          <h1>${p.title}</h1>
+          <div class="swiper">
+            <div class="swiper-wrapper">
+              ${p.images.map(img => `<div class="swiper-slide"><img src="${img}" alt="${p.title}"></div>`).join('')}
+            </div>
+            <div class="swiper-pagination"></div>
+            <div class="swiper-button-prev"></div>
+            <div class="swiper-button-next"></div>
+          </div>
+          <div class="product-info">
+            <p class="desc">${p.description || ''}</p>
+            <p class="price">
+              ${p.oldPrice ? `<span class="old">${p.oldPrice.toLocaleString()} تومان</span>` : ''}
+              <span class="now">${p.price.toLocaleString()} تومان</span>
+            </p>
+          </div>
+        `;
 
-.product-card:hover img {
-  transform: scale(1.05);
-}
-
-.product-card h2 {
-  font-size: 1rem;
-  font-weight: normal;
-}
-
-.product-page {
-  padding: 20px;
-  text-align: center;
-}
-
-.product-page h1 {
-  margin-bottom: 20px;
-}
-
-.swiper {
-  width: 100%;
-  max-width: 400px;
-  margin: 0 auto 20px;
-  border-radius: 10px;
-  overflow: hidden;
-}
-
-.swiper-slide img {
-  width: 100%;
-  display: block;
-}
-
-.description {
-  font-size: 1rem;
-  line-height: 1.6;
-  max-width: 600px;
-  margin: 0 auto;
-  text-align: justify;
-}
-
-.footer {
-  margin-top: 30px;
-  padding: 20px;
-  text-align: center;
-  border-top: 1px solid #eee;
-  font-size: 0.9em;
-}
+        new Swiper('.swiper', {
+          loop: true,
+          pagination: { el: '.swiper-pagination', clickable: true },
+          navigation: { nextEl: '.swiper-button-next', prevEl: '.swiper-button-prev' }
+        });
+      });
+  </script>
+</body>
+</html>
