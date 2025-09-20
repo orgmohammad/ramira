@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="fa">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ژیله مدل حریر | رامیرا</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    .product-detail {
+      max-width: 1000px;
+      margin: 40px auto;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 40px;
+      align-items: flex-start;
+      padding: 0 20px;
+    }
+    .slideshow {
+      position: relative;
+      max-width: 450px;
+      flex: 1;
+    }
+    .slides {
+      display: none;
+      width: 100%;
+      border-radius: 8px;
+    }
+    .active {
+      display: block;
+    }
+    .desc {
+      flex: 1;
+      text-align: right;
+    }
+    .desc h2 {
+      margin-top: 0;
+      font-size: 22px;
+    }
+    .desc p {
+      line-height: 1.8;
+      color: #444;
+    }
+    .price {
+      font-size: 20px;
+      font-weight: bold;
+      margin-top: 15px;
+      color: #e60023;
+    }
+    @media (max-width: 768px) {
+      .product-detail {
+        flex-direction: column;
+        align-items: center;
+      }
+      .desc {
+        text-align: center;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <img src="https://github.com/orgmohammad/ramira/raw/main/photo_2025-09-19_18-12-37.jpg" alt" alt="لوگوی رامیرا" class="logo">
+  </header>
+
+  <main class="product-detail">
+    <!-- اسلایدشو -->
+    <div class="slideshow">
+      <img class="slides active" src="https://github.com/orgmohammad/ramira/blob/a9b07dd8c564bbb5a023adee77ee17ba0f94d819/photo_2025-09-20_17-15-43.jpg" alt="جلوی کار">
+      <img class="slides" src="https://github.com/orgmohammad/ramira/blob/a9b07dd8c564bbb5a023adee77ee17ba0f94d819/photo_2025-09-20_17-15-46.jpg" alt="پشت کار">
+    </div>
+
+    <!-- توضیحات -->
+    <div class="desc">
+      <h2>ژیله مدل پانیذ </h2>
+      <p>
+ژیله مدل حریر آستردار
+قد حدود 60
+ 
+        کارها به صورت تک‌دوزی و طراحی‌شده هستند و حس خاص بودن را منتقل می‌کنند.
+      </p>
+      <p class="price">۱,۱۹۹,۰۰۰ تومان</p>
+    </div>
+  </main>
+
+  <footer>
+    <p>© ۲۰۲۵ رامیرا</p>
+  </footer>
+
+  <script>
+    let index = 0;
+    const slides = document.querySelectorAll(".slides");
+    setInterval(() => {
+      slides[index].classList.remove("active");
+      index = (index + 1) % slides.length;
+      slides[index].classList.add("active");
+    }, 3000);
+  </script>
+</body>
+</html>
