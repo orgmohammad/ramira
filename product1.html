@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="fa">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ژیله مدل دوک | رامیرا</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    .product-detail {
+      max-width: 1000px;
+      margin: 40px auto;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 40px;
+      align-items: flex-start;
+      padding: 0 20px;
+    }
+    .slideshow {
+      position: relative;
+      max-width: 450px;
+      flex: 1;
+    }
+    .slides {
+      display: none;
+      width: 100%;
+      border-radius: 8px;
+    }
+    .active {
+      display: block;
+    }
+    .desc {
+      flex: 1;
+      text-align: right;
+    }
+    .desc h2 {
+      margin-top: 0;
+      font-size: 22px;
+    }
+    .desc p {
+      line-height: 1.8;
+      color: #444;
+    }
+    .price {
+      font-size: 20px;
+      font-weight: bold;
+      margin-top: 15px;
+      color: #e60023;
+    }
+    @media (max-width: 768px) {
+      .product-detail {
+        flex-direction: column;
+        align-items: center;
+      }
+      .desc {
+        text-align: center;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <img src="https://github.com/orgmohammad/ramira/raw/main/photo_2025-09-19_18-16-32.jpg" alt="لوگوی رامیرا" class="logo">
+  </header>
+
+  <main class="product-detail">
+    <!-- اسلایدشو -->
+    <div class="slideshow">
+      <img class="slides active" src="https://github.com/orgmohammad/ramira/raw/main/photo_2025-09-19_18-11-37.jpg" alt="جلوی کار">
+      <img class="slides" src="https://github.com/orgmohammad/ramira/raw/main/photo_2025-09-19_18-11-41.jpg" alt="پشت کار">
+    </div>
+
+    <!-- توضیحات -->
+    <div class="desc">
+      <h2>ژیله مدل دوک</h2>
+      <p>
+        ژیله مدل دوک با طراحی منحصر به فرد و ظاهری کلاسیک.  
+        آستردار با قد حدود ۶۳ سانتی‌متر.  
+        تک‌دوزی و طراحی خاص برای استایل متفاوت.
+      </p>
+      <p class="price">۱,۱۹۹,۰۰۰ تومان</p>
+    </div>
+  </main>
+
+  <footer>
+    <p>© ۲۰۲۵ رامیرا</p>
+  </footer>
+
+  <script>
+    let index = 0;
+    const slides = document.querySelectorAll(".slides");
+    setInterval(() => {
+      slides[index].classList.remove("active");
+      index = (index + 1) % slides.length;
+      slides[index].classList.add("active");
+    }, 3000);
+  </script>
+</body>
+</html>
