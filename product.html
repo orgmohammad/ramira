@@ -1,62 +1,67 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="fa">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>جزئیات محصول — راميرا</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>جزئیات محصول — رامیرا</title>
   <link rel="stylesheet" href="style.css">
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
+  <style>
+    .product-detail {
+      max-width: 800px;
+      margin: 40px auto;
+      text-align: right;
+    }
+    .slideshow {
+      position: relative;
+      max-width: 100%;
+    }
+    .slides {
+      display: none;
+      width: 100%;
+      border-radius: 8px;
+    }
+    .active {
+      display: block;
+    }
+    .desc {
+      margin-top: 20px;
+    }
+    .price {
+      font-size: 18px;
+      margin-top: 10px;
+      color: #e60023;
+    }
+  </style>
 </head>
 <body>
-  <header class="site-header">
-    <div class="container">
-      <a href="index.html"><img class="site-logo" src="https://raw.githubusercontent.com/orgmohammad/ramira/main/photo_2025-09-19_18-16-32.jpg" alt="لوگو"></a>
-    </div>
+  <header>
+    <div class="logo"><a href="index.html">رامیرا</a></div>
   </header>
 
-  <main class="container product-page">
-    <div id="productRoot"></div>
+  <main class="product-detail">
+    <div class="slideshow">
+      <img class="slides active" src="https://github.com/orgmohammad/ramira/raw/main/photo_2025-09-19_18-10-36.jpg" alt="جلوی کار">
+      <img class="slides" src="https://github.com/orgmohammad/ramira/raw/main/photo_2025-09-19_18-11-02.jpg" alt="پشت کار">
+    </div>
+    <div class="desc">
+      <h2>کت سنتی — طرح A</h2>
+      <p>این کت سنتی با طراحی خاص و جنس عالی برای مجالس و استفاده روزمره مناسب است.</p>
+      <p class="price">۹۰۰,۰۰۰ تومان</p>
+    </div>
   </main>
 
-  <footer class="site-footer">© 2025 راميرا</footer>
+  <footer>
+    <p>© ۲۰۲۵ رامیرا</p>
+  </footer>
 
-  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
   <script>
-    const params = new URLSearchParams(location.search);
-    const id = params.get('id');
-
-    fetch('products.json')
-      .then(r => r.json())
-      .then(products => {
-        const p = products.find(x => x.id === id);
-        if (!p) { document.getElementById('productRoot').innerHTML = '<p>محصول پیدا نشد.</p>'; return; }
-
-        const root = document.getElementById('productRoot');
-        root.innerHTML = `
-          <h1>${p.title}</h1>
-          <div class="swiper">
-            <div class="swiper-wrapper">
-              ${p.images.map(img => `<div class="swiper-slide"><img src="${img}" alt="${p.title}"></div>`).join('')}
-            </div>
-            <div class="swiper-pagination"></div>
-            <div class="swiper-button-prev"></div>
-            <div class="swiper-button-next"></div>
-          </div>
-          <div class="product-info">
-            <p class="desc">${p.description || ''}</p>
-            <p class="price">
-              ${p.oldPrice ? `<span class="old">${p.oldPrice.toLocaleString()} تومان</span>` : ''}
-              <span class="now">${p.price.toLocaleString()} تومان</span>
-            </p>
-          </div>
-        `;
-
-        new Swiper('.swiper', {
-          loop: true,
-          pagination: { el: '.swiper-pagination', clickable: true },
-          navigation: { nextEl: '.swiper-button-next', prevEl: '.swiper-button-prev' }
-        });
-      });
+    let index = 0;
+    const slides = document.querySelectorAll(".slides");
+    setInterval(() => {
+      slides[index].classList.remove("active");
+      index = (index + 1) % slides.length;
+      slides[index].classList.add("active");
+    }, 3000);
   </script>
 </body>
 </html>
