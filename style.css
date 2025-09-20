@@ -1,91 +1,54 @@
-/* استایل کلی */
 body {
+  font-family: sans-serif;
   margin: 0;
-  font-family: "Tahoma", sans-serif;
   background: #fff;
-  color: #222;
+  color: #333;
   direction: rtl;
 }
 
-/* هدر */
 header {
   text-align: center;
-  padding: 25px;
-  border-bottom: 1px solid #eee;
+  padding: 20px;
+  border-bottom: 1px solid #ddd;
 }
 
-.logo {
-  height: 60px;
-  object-fit: contain;
-}
-
-/* بخش محصولات */
-.container {
-  padding: 40px 20px;
-}
-
-.products {
+.grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-  gap: 30px;
-  justify-items: center;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 20px;
+  padding: 20px;
 }
 
-.product-card {
-  background: #fff;
+.card {
+  border: 1px solid #eee;
   border-radius: 10px;
-  overflow: hidden;
+  padding: 10px;
+  text-align: center;
+  background: #fafafa;
+  transition: transform 0.3s;
   text-decoration: none;
   color: inherit;
-  max-width: 240px;
-  box-shadow: 0 4px 15px rgba(0,0,0,0.08);
-  transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
 
-.product-card:hover {
+.card:hover {
   transform: translateY(-5px);
-  box-shadow: 0 6px 20px rgba(0,0,0,0.12);
 }
 
-.card-img img {
+.card img {
   width: 100%;
-  height: 280px;
-  object-fit: cover;
-}
-
-.product-card h3 {
-  margin: 12px;
-  font-size: 15px;
-  font-weight: 600;
+  border-radius: 10px;
 }
 
 .price {
-  margin: 0 12px 15px;
   font-weight: bold;
-  font-size: 14px;
-  color: #e60023;
+  color: #444;
+  margin-top: 10px;
 }
 
-/* فوتر */
-footer {
-  margin-top: 50px;
-  padding: 20px;
-  text-align: center;
-  font-size: 14px;
-  color: #777;
-  border-top: 1px solid #eee;
-}
-.gallery {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 15px;
-  margin: 20px 0;
-}
-
-.gallery img {
-  max-width: 400px; /* حداکثر عرض عکس */
+main img {
+  max-width: 400px;
   width: 100%;
+  display: block;
+  margin: 10px auto;
   border-radius: 10px;
 }
-
