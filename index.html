@@ -1,54 +1,36 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="fa">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>راميرا — فروشگاه</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>رامیرا — فروشگاه</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <header class="site-header">
-    <div class="container">
-      <img class="site-logo" src="https://raw.githubusercontent.com/orgmohammad/ramira/main/photo_2025-09-19_18-16-32.jpg" alt="لوگو">
-      <div class="site-phone">۰۹۲۰۴۸۸۰۹۷۰</div>
-    </div>
+  <header>
+    <div class="logo">رامیرا</div>
   </header>
 
   <main class="container">
-    <section class="product-grid" id="productGrid"></section>
+    <div class="products">
+      <!-- محصول ۱ -->
+      <a href="product.html" class="product-card">
+        <img src="https://github.com/orgmohammad/ramira/raw/main/photo_2025-09-19_18-10-36.jpg" alt="جلوی کار">
+        <h3>کت سنتی — طرح A</h3>
+        <p class="price">۹۰۰,۰۰۰ تومان</p>
+      </a>
+
+      <!-- محصول ۲ -->
+      <a href="product.html" class="product-card">
+        <img src="https://github.com/orgmohammad/ramira/raw/main/photo_2025-09-19_18-11-02.jpg" alt="پشت کار">
+        <h3>کت سنتی — طرح B</h3>
+        <p class="price">۱,۲۰۰,۰۰۰ تومان</p>
+      </a>
+    </div>
   </main>
 
-  <footer class="site-footer">
-    © 2025 راميرا
+  <footer>
+    <p>© ۲۰۲۵ رامیرا</p>
   </footer>
-
-  <script>
-    // بارگذاری products.json و رندر کارت‌ها
-    fetch('products.json')
-      .then(r => r.json())
-      .then(products => {
-        const grid = document.getElementById('productGrid');
-        products.forEach(p => {
-          const a = document.createElement('a');
-          a.className = 'product-card';
-          a.href = `product.html?id=${encodeURIComponent(p.id)}`;
-          a.innerHTML = `
-            <div class="image-wrap">
-              <img src="${p.images[0]}" alt="${p.title}">
-              ${p.oldPrice ? `<span class="badge-discount">تخفیف</span>` : ''}
-            </div>
-            <div class="meta">
-              <h3>${p.title}</h3>
-              <div class="price">
-                ${p.oldPrice ? `<span class="old">‎${p.oldPrice.toLocaleString()} تومان</span>` : ''}
-                <span class="now">‎${p.price.toLocaleString()} تومان</span>
-              </div>
-            </div>
-          `;
-          grid.appendChild(a);
-        });
-      })
-      .catch(err => console.error(err));
-  </script>
 </body>
 </html>
