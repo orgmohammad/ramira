@@ -8,16 +8,22 @@ body {
 }
 
 /* هدر */
-header {
+.site-header {
+  background: linear-gradient(90deg, #000, #b8860b); /* مشکی–طلایی */
+  padding: 12px 0;
   text-align: center;
-  padding: 25px;
-  border-bottom: 1px solid #eee;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.3);
 }
 
+/* لوگو */
 .logo {
-  height: 60px;
+  height: 70px;       /* ارتفاع کنترل‌شده */
+  max-width: 180px;   /* عرض محدود */
   object-fit: contain;
+  display: block;
+  margin: 0 auto;
 }
+
 
 /* بخش محصولات */
 .container {
