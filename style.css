@@ -8,10 +8,12 @@ body {
 }
 
 /* هدر */
-header {
+.site-header {
+  background: linear-gradient(90deg, #000, #b8860b); /* مشکی → طلایی */
+  padding: 24px 10px;
   text-align: center;
-  padding: 25px;
-  border-bottom: 1px solid #eee;
+}
+
 }
 
 .logo {
