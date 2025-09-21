@@ -24,7 +24,7 @@ body {
 
 /* لوگو */
 .logo {
-  height: 50px !important;  /* جمع‌وجورتر */
+  height: 70px !important;  /* جمع‌وجورتر */
   width: auto !important;
   max-width: 150px;
   object-fit: contain;
