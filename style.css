@@ -14,9 +14,11 @@ header {
   border-bottom: 1px solid #eee;
 }
 
-.logo {
-  height: 60px;
+.site-logo {
+  height: 80px;   /* این عدد رو می‌تونی تغییر بدی مثلا 100px برای بزرگتر */
   object-fit: contain;
+}
+
 }
 
 /* بخش محصولات */
