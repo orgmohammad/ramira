@@ -60,15 +60,15 @@ body {
   box-shadow: 0 6px 20px rgba(0,0,0,0.12);
 }
 
-.card {
-  background: #111;                /* مشکی تیره */
-  border: 1px solid #d4af37;       /* خط طلایی */
-  border-radius: 12px;
-  overflow: hidden;
-  text-decoration: none;
-  color: inherit;
-  box-shadow: 0 6px 20px rgba(0,0,0,0.6);
-  transition: transform .2s ease, box-shadow .2s ease;
+.card > img {
+  width: 100%;
+  height: auto;          /* اجازه بده ارتفاع طبیعی باشه */
+  max-height: 320px;     /* حداکثر ارتفاع تا کارت‌ها خیلی بلند نشن */
+  object-fit: cover;
+  display: block;
+  border-radius: 12px 12px 0 0;
+}
+
 }
 .card:hover {
   transform: translateY(-6px);
