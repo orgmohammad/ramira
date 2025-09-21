@@ -103,4 +103,27 @@ footer {
 .whatsapp-btn:hover {
   background: #1ebd5a;
 }
+.site-header {
+  background: #000; /* بک‌گراند مشکی */
+  padding: 60px 20px 40px; /* ارتفاع زیاد برای حالت بنر */
+  text-align: center;
+  position: relative;
+  border-bottom: 3px solid #b8860b; /* خط طلایی زیر هدر */
+}
+
+.site-logo {
+  max-width: 260px; /* سایز بزرگ‌تر لوگو */
+  height: auto;
+  margin-bottom: 12px;
+}
+
+.site-tagline {
+  color: #b8860b;
+  font-size: 18px;
+  font-weight: 500;
+  margin: 0;
+  letter-spacing: 1px;
+}
+
+
 
