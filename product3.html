@@ -5,6 +5,10 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>ژیله مدل پانیذ | رامیرا</title>
   <link rel="stylesheet" href="style.css">
+
+  <!-- Lightbox CSS -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/css/lightbox.min.css" rel="stylesheet"/>
+
   <style>
     .product-detail {
       max-width: 1000px;
@@ -15,18 +19,15 @@
       align-items: flex-start;
       padding: 0 20px;
     }
-    .slideshow {
-      position: relative;
-      max-width: 450px;
+    .product-images {
       flex: 1;
+      max-width: 450px;
     }
-    .slides {
-      display: none;
+    .product-images img {
       width: 100%;
       border-radius: 8px;
-    }
-    .active {
-      display: block;
+      margin-bottom: 12px;
+      cursor: pointer;
     }
     .desc {
       flex: 1;
@@ -65,43 +66,39 @@
 </header>
 
   <main class="product-detail">
-    <!-- اسلایدشو -->
-    <div class="slideshow">
-      <img class="slides active" src="https://github.com/orgmohammad/ramira/raw/main/photo_2025-09-19_18-12-37.jpg" alt="جلوی کار">
-      <img class="slides" src="https://github.com/orgmohammad/ramira/raw/main/photo_2025-09-19_18-12-40.jpg" alt="پشت کار">
+    <!-- گالری تصاویر -->
+    <div class="product-images">
+      <a href="https://github.com/orgmohammad/ramira/raw/main/photo_2025-09-19_18-12-37.jpg" data-lightbox="product-paniz" data-title="ژیله مدل پانیذ - جلوی کار">
+        <img src="https://github.com/orgmohammad/ramira/raw/main/photo_2025-09-19_18-12-37.jpg" alt="جلوی کار">
+      </a>
+      <a href="https://github.com/orgmohammad/ramira/raw/main/photo_2025-09-19_18-12-40.jpg" data-lightbox="product-paniz" data-title="ژیله مدل پانیذ - پشت کار">
+        <img src="https://github.com/orgmohammad/ramira/raw/main/photo_2025-09-19_18-12-40.jpg" alt="پشت کار">
+      </a>
     </div>
 
     <!-- توضیحات -->
     <div class="desc">
-      <h2>ژیله مدل پانیذ </h2>
+      <h2>ژیله مدل پانیذ</h2>
       <p>
         ژیله مدل پانیذ با طراحی خاص و دوخت تمیز.  
         آستردار با قد حدود ۶۳ سانتی‌متر.  
         کارها به صورت تک‌دوزی و طراحی‌شده هستند و حس خاص بودن را منتقل می‌کنند.
       </p>
       <p class="price">۱,۱۹۹,۰۰۰ تومان</p>
+      <div class="order-box">
+        <p>برای ثبت سفارش به شماره <strong>09120653481</strong> در واتساپ پیام دهید.</p>
+        <a class="whatsapp-btn" href="https://wa.me/989120653481" target="_blank">
+          ثبت سفارش در واتساپ
+        </a>
+      </div>
     </div>
-<div class="order-box">
-  <p>برای ثبت سفارش به شماره <strong>09120653481</strong> در واتساپ پیام دهید.</p>
-  <a class="whatsapp-btn" href="https://wa.me/989120653481" target="_blank">
-    ثبت سفارش در واتساپ
-  </a>
-</div>
-
   </main>
 
   <footer>
     <p>© ۲۰۲۵ رامیرا</p>
   </footer>
 
-  <script>
-    let index = 0;
-    const slides = document.querySelectorAll(".slides");
-    setInterval(() => {
-      slides[index].classList.remove("active");
-      index = (index + 1) % slides.length;
-      slides[index].classList.add("active");
-    }, 3000);
-  </script>
+  <!-- Lightbox JS -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/js/lightbox.min.js"></script>
 </body>
 </html>
