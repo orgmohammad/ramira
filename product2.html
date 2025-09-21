@@ -5,6 +5,10 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>ژیله مدل دوک | رامیرا</title>
   <link rel="stylesheet" href="style.css">
+
+  <!-- Lightbox CSS -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/css/lightbox.min.css" rel="stylesheet"/>
+
   <style>
     .product-detail {
       max-width: 1000px;
@@ -15,18 +19,15 @@
       align-items: flex-start;
       padding: 0 20px;
     }
-    .slideshow {
-      position: relative;
-      max-width: 450px;
+    .product-images {
       flex: 1;
+      max-width: 450px;
     }
-    .slides {
-      display: none;
+    .product-images img {
       width: 100%;
       border-radius: 8px;
-    }
-    .active {
-      display: block;
+      margin-bottom: 12px;
+      cursor: pointer;
     }
     .desc {
       flex: 1;
@@ -63,11 +64,16 @@
     <img src="https://raw.githubusercontent.com/orgmohammad/ramira/3173bad7a45378534ce74cd5603111356bd5ee39/ChatGPT%20Image%20Sep%2021%2C%202025%2C%2006_16_32%20AM.png" alt="لوگو راميرا" class="logo">
   </div>
 </header>
+
   <main class="product-detail">
-    <!-- اسلایدشو -->
-    <div class="slideshow">
-      <img class="slides active" src="https://github.com/orgmohammad/ramira/raw/main/photo_2025-09-19_18-11-37.jpg" alt="جلوی کار">
-      <img class="slides" src="https://github.com/orgmohammad/ramira/raw/main/photo_2025-09-19_18-11-41.jpg" alt="پشت کار">
+    <!-- گالری تصاویر -->
+    <div class="product-images">
+      <a href="https://github.com/orgmohammad/ramira/raw/main/photo_2025-09-19_18-11-37.jpg" data-lightbox="product2" data-title="ژیله مدل دوک - جلوی کار">
+        <img src="https://github.com/orgmohammad/ramira/raw/main/photo_2025-09-19_18-11-37.jpg" alt="جلوی کار">
+      </a>
+      <a href="https://github.com/orgmohammad/ramira/raw/main/photo_2025-09-19_18-11-41.jpg" data-lightbox="product2" data-title="ژیله مدل دوک - پشت کار">
+        <img src="https://github.com/orgmohammad/ramira/raw/main/photo_2025-09-19_18-11-41.jpg" alt="پشت کار">
+      </a>
     </div>
 
     <!-- توضیحات -->
@@ -79,29 +85,20 @@
         تک‌دوزی و طراحی خاص برای استایل متفاوت.
       </p>
       <p class="price">۱,۱۹۹,۰۰۰ تومان</p>
+      <div class="order-box">
+        <p>برای ثبت سفارش به شماره <strong>09120653481</strong> در واتساپ پیام دهید.</p>
+        <a class="whatsapp-btn" href="https://wa.me/989120653481" target="_blank">
+          ثبت سفارش در واتساپ
+        </a>
+      </div>
     </div>
-<div class="order-box">
-  <p>برای ثبت سفارش به شماره <strong>09120653481</strong> در واتساپ پیام دهید.</p>
-  <a class="whatsapp-btn" href="https://wa.me/989120653481" target="_blank">
-    ثبت سفارش در واتساپ
-  </a>
-</div>
-
-
   </main>
 
   <footer>
     <p>© ۲۰۲۵ رامیرا</p>
   </footer>
 
-  <script>
-    let index = 0;
-    const slides = document.querySelectorAll(".slides");
-    setInterval(() => {
-      slides[index].classList.remove("active");
-      index = (index + 1) % slides.length;
-      slides[index].classList.add("active");
-    }, 3000);
-  </script>
+  <!-- Lightbox JS -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/js/lightbox.min.js"></script>
 </body>
 </html>
