@@ -14,8 +14,8 @@ header {
   border-bottom: 1px solid #eee;
 }
 
-.site-logo {
-  height: 80px;   /* این عدد رو می‌تونی تغییر بدی مثلا 100px برای بزرگتر */
+.logo {
+  height: 80px;
   object-fit: contain;
 }
 
