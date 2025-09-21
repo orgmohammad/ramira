@@ -1,17 +1,24 @@
 /* استایل کلی */
 body {
-  margin: 0;
   font-family: "Tahoma", sans-serif;
-  background: #fff;
-  color: #222;
   direction: rtl;
+  background:#000;   /* مشکی */
+  color:#eee;        /* متن روشن */
+}
+
 }
 
 /* هدر */
 .site-header {
-  background: linear-gradient(90deg, #000, #b8860b); /* مشکی → طلایی */
-  padding: 12px 0;   /* پدینگ کمتر */
+  background: linear-gradient(90deg, #000, #d4af37); /* مشکی→طلایی */
+  padding: 14px 0;
   text-align: center;
+}
+.site-logo {
+  width: 200px;
+  height: auto;
+}
+
 }
 
 }
@@ -53,10 +60,26 @@ body {
   box-shadow: 0 6px 20px rgba(0,0,0,0.12);
 }
 
-.card-img img {
-  width: 100%;
-  height: 280px;
-  object-fit: cover;
+.card {
+  background: #111;                /* مشکی تیره */
+  border: 1px solid #d4af37;       /* خط طلایی */
+  border-radius: 12px;
+  overflow: hidden;
+  text-decoration: none;
+  color: inherit;
+  box-shadow: 0 6px 20px rgba(0,0,0,0.6);
+  transition: transform .2s ease, box-shadow .2s ease;
+}
+.card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 12px 30px rgba(0,0,0,0.9);
+}
+.price {
+  font-size: 18px;
+  font-weight: bold;
+  color: #d4af37;   /* طلایی */
+}
+
 }
 
 .product-card h3 {
