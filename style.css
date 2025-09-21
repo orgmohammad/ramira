@@ -10,15 +10,23 @@ body {
 /* هدر */
 .site-header {
   background: linear-gradient(90deg, #000, #b8860b); /* مشکی–طلایی */
-  padding: 12px 0;
+  padding: 8px 0; /* ارتفاع باریک‌تر */
   text-align: center;
   box-shadow: 0 2px 8px rgba(0,0,0,0.3);
 }
 
+/* کانتینر داخلی هدر */
+.header-inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 10px;
+}
+
 /* لوگو */
 .logo {
-  height: 70px;       /* ارتفاع کنترل‌شده */
-  max-width: 180px;   /* عرض محدود */
+  height: 50px !important;  /* جمع‌وجورتر */
+  width: auto !important;
+  max-width: 150px;
   object-fit: contain;
   display: block;
   margin: 0 auto;
@@ -80,4 +88,14 @@ footer {
   font-size: 14px;
   color: #777;
   border-top: 1px solid #eee;
+}
+
+/* ✅ اصلاح لوگو */
+.logo {
+  height: 70px !important;
+  width: auto !important;
+  max-width: 180px;
+  object-fit: contain;
+  display: block;
+  margin: 0 auto;
 }
