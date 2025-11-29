@@ -168,11 +168,4 @@ footer {
 body.dark .social-btn {
   box-shadow: 0 4px 12px rgba(255,255,255,0.15);
 }
-* {
-  background-color: transparent !important;
-}
-
-body {
-  background: #cb8e8e !important;
-}
 
